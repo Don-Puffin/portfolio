@@ -30,3 +30,49 @@ document.addEventListener("DOMContentLoaded", function () {
         imageObserver.observe(element);
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+  
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+  
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+  });
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // English (UK) button
+    const languageDropdownButton = document.getElementById("languageDropdownButton");
+    const languageDropdownMenu = document.getElementById("language-dropdown-menu");
+  
+    if (languageDropdownButton) {
+      languageDropdownButton.addEventListener("click", function () {
+        languageDropdownMenu.classList.toggle("hidden");
+      });
+    }
+  
+    // Japanese button
+    const japaneseButton = document.getElementById("japaneseButton");
+    const japaneseContent = document.getElementById("japaneseContent");
+  
+    if (japaneseButton) {
+      japaneseButton.addEventListener("click", function () {
+        // Toggle visibility or perform any specific action for Japanese content
+        japaneseContent.classList.toggle("hidden");
+      });
+    }
+  });
