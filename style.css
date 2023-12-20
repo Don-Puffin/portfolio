@@ -1,4 +1,5 @@
 
+
 nav {
     z-index: 1000; /* Set a high z-index value */
   }
@@ -156,4 +157,35 @@ nav {
     to {
         transform: translateY(-2000px);
     }
+}
+
+@keyframes pulse {
+    50% {
+        opacity: .8;
+        size: .1;
+    }
+}
+
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-2.5%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+.animate-bounce-personal {
+    animation: bounce 3s infinite;
+    animation-play-state: running; /* Initially pause the animation */
+}
+
+/* Apply the animation after 5 seconds */
+.animate-bounce-personal.active {
+    animation-play-state: running;
+    animation-delay: 5s; /* Add a delay of 5 seconds before starting */
 }
