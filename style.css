@@ -1,3 +1,17 @@
+@keyframes custom-pulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+    /* Other styling properties can be added here */
+}
+
 
 nav {
     z-index: 1000; /* Set a high z-index value */
