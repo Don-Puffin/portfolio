@@ -31,25 +31,33 @@
 
 
 <style>
-    .image-container {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
+ .image-container {
+    position: relative;
+}
 
-    .hover-image {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-    }
+.hover-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-    .image-container:hover .hover-image {
-        display: block;
-    }
+.image-container:hover .hover-image {
+    opacity: 1;
+}
+
 </style>
+
+<style>
+.image-hover {
+    background-color: #3e8e41;
+    color: white;
+  }
+  </style>
 
 </head>
 
@@ -177,13 +185,13 @@
 
         <!-- Image Box -->
         <div class="lg:w-1/2">
-            <div class="image-container animate-bounce-personal transition ease-in-out delay-150">
+            <div class="image-container animate-bounce-personal delay-150">
                 <img src="cutelogomanfin.png" 
-                alt="Aaron's Image" 
-                class=" mx-auto md:mx-36 mb-40 bg-orange-500 rounded-full w-2/3 h-auto shadow-2xl">
+                    alt="Aaron's Image" 
+                    class="mx-auto md:mx-36 mb-40 bg-orange-500 rounded-full w-2/3 h-auto shadow-2xl">
                 <img src="Kimono edit2.jpg" 
-                alt="Kimono Edit" 
-                class="hover-image transition ease-in-out delay-150 mx-auto md:mx-36 bg-orange-500 scale-105 rounded-full w-2/3 mt-2 h-auto shadow-2xl">
+                    alt="Kimono Edit" 
+                    class="hover-image  delay-150 mx-auto md:mx-36 bg-orange-500 scale-105 rounded-full w-2/3 mt-2 h-auto shadow-2xl">
             </div>
         </div>
 
