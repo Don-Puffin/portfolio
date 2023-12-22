@@ -28,6 +28,29 @@
             font-weight:bold;
         }
     </style>
+
+
+<style>
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .hover-image {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .image-container:hover .hover-image {
+        display: block;
+    }
+</style>
+
 </head>
 
 <body style="background-color: black;">
@@ -111,13 +134,28 @@
  <!-- Text Box -->
  <div class="lg:w-1/2">
     
- <div class="md:text-6xl text-2xl font-bold flex-nowrap rounded-lg p-4 text-orange-500 mx-32 my-40 leading-loose">Hello, World!</span><span class="whiteText md:text-6xl text-2xl font-bold flex-nowrap leading-relaxed"><br/>I'm Aaron </span><span class="text-orange-500 md:text-6xl text-2xl font-bold flex-nowrap leading-relaxed"><br/>Web Developer</span>
+ <div class="md:text-6xl text-2xl font-bold flex-nowrap rounded-lg p-4 text-orange-500 mx-32 my-40 md:leading-relaxed">
+    Hello, World!
+</span><span class="whiteText md:text-6xl text-2xl font-bold flex-nowrap md:leading-relaxed">
+    <br/>
+    I'm Aaron 
+</span><span class="text-orange-500 md:text-6xl text-2xl font-bold flex-nowrap md:leading-relaxed">
+    <br/>
+    Web Developer
+</span>
  </div>
 </div>
 
         <!-- Image Box -->
         <div class="lg:w-1/2">
-            <img src="Kimono edit2.jpg" alt="Aaron's Image" class="mx-auto md:mx-36  rounded-full w-2/3 h-auto shadow-2xl">
+            <div class="image-container">
+                <img src="cutelogomanfin.png" 
+                alt="Aaron's Image" 
+                class=" md:motion-safe:animate-pulse mx-auto md:mx-36 bg-orange-500 rounded-full w-2/3 h-auto shadow-2xl">
+                <img src="Kimono edit2.jpg" 
+                alt="Kimono Edit" 
+                class="hover-image mx-auto md:mx-36 bg-orange-500 scale-105 rounded-full w-2/3 mt-2 h-auto shadow-2xl">
+            </div>
         </div>
 
 

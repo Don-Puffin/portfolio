@@ -76,3 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+// contact form
+
+// const form = document.querySelector('form');
+
+
+
+
