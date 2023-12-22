@@ -52,7 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
+  const typed = new Typed(".auto-type", {
+    strings: ["Web Developer", "Programmer", "Artist", "Gamer", "Historian"],
+    typeSpeed: 150,
+    backspeed: 150,
+    loop: true,
+  });
 
   // document.addEventListener("DOMContentLoaded", function () {
   //   // English (UK) button
