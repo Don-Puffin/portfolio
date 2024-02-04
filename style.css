@@ -32,6 +32,10 @@ nav {
 
 }
 
+.svg-container:hover path {
+    fill: #FFA500;
+}
+
 #stars {
     width: 1px;
     height: 1px;
